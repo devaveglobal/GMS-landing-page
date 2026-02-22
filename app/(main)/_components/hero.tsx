@@ -4,9 +4,11 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 const Hero = () => {
+  const router = useRouter();
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center pt-24 overflow-hidden">
       {/* Background with subtle tech mesh */}
@@ -46,11 +48,15 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <Button className="bg-lime text-black hover:bg-lime/90 font-black rounded-full h-16 px-10 text-xl uppercase italic group transition-all">
+            <Button
+              onClick={() => router.push("/demo")}
+              className="bg-lime text-black hover:bg-lime/90 font-black rounded-full h-16 px-10 text-xl uppercase italic group transition-all"
+            >
               Book a Free Demo
               <Play className="ml-2 w-5 h-5 fill-current" />
             </Button>
             <Button
+              onClick={() => router.push("/features")}
               variant="outline"
               className="border-white/20 bg-white/5 hover:bg-white/10 text-white font-black rounded-full h-16 px-10 text-xl uppercase italic border-2"
             >

@@ -101,7 +101,7 @@ const Footer = () => {
                 <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-lime transition-colors">
                   <Mail className="w-5 h-5 text-white group-hover:text-black" />
                 </div>
-                <span className="text-white/50">contact@fittex.com</span>
+                <span className="text-white/50">devaveglobal@gmail.com</span>
               </div>
             </div>
           </div>
@@ -139,7 +139,7 @@ const Footer = () => {
               target="_blank"
               className="text-white font-bold italic hover:text-lime transition-colors"
             >
-              devave Global
+              Devave Global
             </Link>
           </p>
         </div>

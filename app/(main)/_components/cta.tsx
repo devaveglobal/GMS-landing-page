@@ -109,7 +109,7 @@ const CTA = () => {
                   <Mail className="w-6 h-6 text-white group-hover/item:text-black" />
                 </div>
                 <span className="text-white text-lg font-bold italic">
-                  contact@fittex.com
+                  devaveglobal@gmail.com
                 </span>
               </div>
             </div>

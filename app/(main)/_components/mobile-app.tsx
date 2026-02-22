@@ -81,7 +81,7 @@ const MobileApp = () => {
                 fill
                 className="object-cover opacity-80"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black" />
+              <div className="absolute inset-0 bg-linear-to-b from-black/40 via-transparent to-black" />
 
               {/* UI Elements Simulated */}
               <div className="absolute bottom-10 left-6 right-6 flex flex-col gap-4">

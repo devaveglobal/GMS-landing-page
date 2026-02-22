@@ -4,10 +4,12 @@ import Link from "next/link";
 import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,10 +42,11 @@ const Navbar = () => {
         {/* Links */}
         <div className="hidden md:flex items-center gap-8">
           {[
-            { name: "Features", href: "#features" },
-            { name: "How it Works", href: "#how-it-works" },
-            { name: "Pricing", href: "#pricing" },
-            { name: "FAQ", href: "#faq" },
+            { name: "Home", href: "/" },
+            { name: "Features", href: "/features" },
+            { name: "How it Works", href: "/#how-it-works" },
+            { name: "Pricing", href: "/#pricing" },
+            { name: "FAQ", href: "/#faq" },
           ].map((item) => (
             <Link
               key={item.name}
@@ -58,12 +61,9 @@ const Navbar = () => {
         {/* Actions */}
         <div className="flex items-center gap-4">
           <Button
-            variant="ghost"
-            className="text-white font-bold hover:text-lime"
+            onClick={() => router.push("/demo")}
+            className="bg-lime text-black hover:bg-lime/90 font-bold rounded-full px-8"
           >
-            LOGIN
-          </Button>
-          <Button className="bg-lime text-black hover:bg-lime/90 font-bold rounded-full px-8">
             BOOK DEMO
           </Button>
         </div>
