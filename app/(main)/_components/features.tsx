@@ -11,10 +11,12 @@ import {
   ShieldCheck,
   ArrowRight,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 const featureGroups = [
   {
+    slug: "membership-billing",
     icon: CreditCard,
     title: "Membership & Billing Automation",
     features: [
@@ -29,6 +31,7 @@ const featureGroups = [
     color: "lime",
   },
   {
+    slug: "trainer-management",
     icon: Users,
     title: "Trainer & Class Management",
     features: [
@@ -43,6 +46,7 @@ const featureGroups = [
     color: "blue",
   },
   {
+    slug: "marketing-automation",
     icon: Zap,
     title: "Lead & Marketing Automation",
     features: [
@@ -57,6 +61,7 @@ const featureGroups = [
     color: "purple",
   },
   {
+    slug: "access-control",
     icon: ShieldCheck,
     title: "Access Control & Check-in",
     features: [
@@ -73,6 +78,8 @@ const featureGroups = [
 ];
 
 const Features = () => {
+  const router = useRouter();
+
   return (
     <section className="py-24 bg-background relative" id="features">
       <div className="max-w-7xl mx-auto px-6">
@@ -145,7 +152,10 @@ const Features = () => {
                   ))}
                 </div>
 
-                <button className="flex items-center gap-2 text-lime font-black uppercase italic tracking-widest text-sm hover:translate-x-2 transition-transform self-start mt-4">
+                <button
+                  onClick={() => router.push(`/features/${group.slug}`)}
+                  className="flex items-center gap-2 text-lime font-black uppercase italic tracking-widest text-sm hover:translate-x-2 transition-transform self-start mt-4"
+                >
                   Learn More About This <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
