@@ -86,6 +86,7 @@ const Problems = () => {
               </h3>
               <p className="text-white/40 font-medium leading-relaxed">
                 {prob.description}
+                
               </p>
             </motion.div>
           ))}
